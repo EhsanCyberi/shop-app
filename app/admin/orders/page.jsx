@@ -11,7 +11,7 @@ export default async function Page() {
     return (
         <div>
             <IsAdmin>
-                <Suspense ffallback={<Loading />}>
+                <Suspense fallback={<Loading />}>
                     <Orders orderUsers={orders}/>
                 </Suspense>
             </IsAdmin>

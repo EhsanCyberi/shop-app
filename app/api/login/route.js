@@ -36,12 +36,13 @@ export async function POST(req) {
     )
 
     const response = NextResponse.json({message: "ورود موفقیت آمیز"})
-
+    
     response.cookies.set("token", token, {
         httpOnly: true,
         secure: true,
         sameSite: "none",
         path: "/",
+        maxAge: 60 * 60 * 24 * 7
     });
     return response;
 }

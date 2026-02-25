@@ -1,6 +1,7 @@
 import IsAdmin from "@/components/IsAdmin";
-import ProductsAdmin from "@/components/ProductsAdmin";
+import Loading from "@/components/Loading";
 import UsersData from "@/components/UsersData";
+import { Suspense } from "react";
 
 export default async function Page() {
     const res = await fetch("https://shop-apps-omega.vercel.app/api/users", {
@@ -10,7 +11,9 @@ export default async function Page() {
     return (
         <div>
             <IsAdmin>
-                <UsersData users={users}/>
+                <Suspense fallback={<Loading/>}>
+                    <UsersData users={users}/>
+                </Suspense>
             </IsAdmin>
         </div>
     )
