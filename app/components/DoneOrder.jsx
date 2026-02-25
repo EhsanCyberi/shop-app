@@ -8,7 +8,7 @@ export default function DoneOrder({orderId, refreshHandler}) {
     const CheckOrder = async (e) => {
         e.preventDefault()
         try {
-            const res = await fetch("http://localhost:3000/api/orders", {
+            const res = await fetch("https://shop-apps-7e62ame79-ehsans-projects-adeb9c1e.vercel.app/api/orders", {
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(sendData)

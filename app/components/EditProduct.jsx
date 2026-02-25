@@ -35,7 +35,7 @@ export default function EditProduct({refHandler, productData, kays, handleComp})
     async function editProduct(e) {
         e.preventDefault()
         try {
-            const res = await fetch("http://localhost:3000/api/products", {
+            const res = await fetch("https://shop-apps-7e62ame79-ehsans-projects-adeb9c1e.vercel.app/api/products", {
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(product)

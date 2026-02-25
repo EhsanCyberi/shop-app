@@ -39,7 +39,7 @@ export async function POST(req) {
 
     response.cookies.set("token", token, {
         httpOnly: true,
-        secure: false,
+        secure: true,
         sameSite: "lax",
         path: "/",
     });

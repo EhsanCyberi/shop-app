@@ -36,7 +36,7 @@ export default function CartBuy({user}) {
             totalPrice: totalPrice()
         }
 
-        const response = await fetch("http://localhost:3000/api/orders", {
+        const response = await fetch("https://shop-apps-7e62ame79-ehsans-projects-adeb9c1e.vercel.app/api/orders", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(orderData)

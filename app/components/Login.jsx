@@ -19,7 +19,7 @@ export default function Register() {
     async function login(e) {
         try {
             e.preventDefault()
-            const res = await fetch("http://localhost:3000/api/login", {
+            const res = await fetch("https://shop-apps-7e62ame79-ehsans-projects-adeb9c1e.vercel.app/api/login", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(user)

@@ -17,7 +17,7 @@ export default function Header({user}) {
     const router = useRouter()
     const {cart} = useContext(CartContex)
     const logout = async () => {
-    await fetch("http://localhost:3000/api/logout",{ 
+    await fetch("https://shop-apps-7e62ame79-ehsans-projects-adeb9c1e.vercel.app/api/logout",{ 
         method: "POST",
         headers: {"Content-Type": "application/json"},
         credentials: "include",

@@ -7,7 +7,7 @@ export default function ChangeRoleUser({user, refreshHandler}) {
     const changeRole = async (e) => {
         e.preventDefault()
         try {
-            const res = await fetch("http://localhost:3000/api/users", {
+            const res = await fetch("https://shop-apps-7e62ame79-ehsans-projects-adeb9c1e.vercel.app/api/users", {
                 method: "PUT",
                 headers: {"Content-Type" : "application/json"},
                 body: JSON.stringify(userTarget)
