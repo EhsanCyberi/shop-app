@@ -16,7 +16,7 @@ export default function Register() {
     async function sendData(e) {
         e.preventDefault()
         try {
-            const res = await fetch("https://shop-apps-7e62ame79-ehsans-projects-adeb9c1e.vercel.app/api/register", {
+            const res = await fetch("https://shop-apps-omega.vercel.app/api/register", {
                 method: "POST",
                 headers: {"Content-type":"application/json"},
                 body: JSON.stringify(user)

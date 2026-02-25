@@ -22,7 +22,7 @@ export default function AddNewProduct({refHandler, handleComp}) {
     async function addProduct(e) {
         e.preventDefault()
         try {
-            const res = await fetch("https://shop-apps-7e62ame79-ehsans-projects-adeb9c1e.vercel.app/api/products", {
+            const res = await fetch("https://shop-apps-omega.vercel.app/api/products", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(product)
