@@ -11,7 +11,8 @@ export default function DoneOrder({orderId, refreshHandler}) {
             const res = await fetch("https://shop-apps-omega.vercel.app/api/orders", {
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(sendData)
+                body: JSON.stringify(sendData),
+                credentials: 'include',
             })
             const result = await res.json()
             if (res.ok) {

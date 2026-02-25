@@ -19,7 +19,8 @@ export default function Register() {
             const res = await fetch("https://shop-apps-omega.vercel.app/api/register", {
                 method: "POST",
                 headers: {"Content-type":"application/json"},
-                body: JSON.stringify(user)
+                body: JSON.stringify(user),
+                credentials: 'include',
             })
             const resData = await res.json();
             if (res.ok) {

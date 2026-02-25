@@ -38,7 +38,8 @@ export default function EditProduct({refHandler, productData, kays, handleComp})
             const res = await fetch("https://shop-apps-omega.vercel.app/api/products", {
                 method: "PUT",
                 headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(product)
+                body: JSON.stringify(product),
+                credentials: 'include',
             })
             const result = await res.json()
             if (res.ok) {

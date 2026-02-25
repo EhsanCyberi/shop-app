@@ -6,7 +6,7 @@ export async function GetProducts(searchParams = {}) {
     ? `https://shop-apps-omega.vercel.app/api/products?category=${category}`
     : "https://shop-apps-omega.vercel.app/api/products"
 
-  const res = await fetch(url)
+  const res = await fetch(url, {credentials: 'include',})
   const products = await res.json()
 
   return { products, category }

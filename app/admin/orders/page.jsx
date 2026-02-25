@@ -4,7 +4,9 @@ import Orders from "@/components/Orders";
 import { Suspense } from "react";
 
 export default async function Page() {
-    const response = await fetch("https://shop-apps-omega.vercel.app/api/orders")
+    const response = await fetch("https://shop-apps-omega.vercel.app/api/orders", {
+        credentials: 'include',
+    })
     const orders = await response.json()
     return (
         <div>

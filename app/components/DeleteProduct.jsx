@@ -11,7 +11,8 @@ export default function DeleteProduct({userId, refHandler}) {
                 const res = await fetch("https://shop-apps-omega.vercel.app/api/products",{
                     method: "DELETE",
                     headers: {"Content-Type": "application/json"},
-                    body: JSON.stringify(user_id)
+                    body: JSON.stringify(user_id),
+                    credentials: 'include',
                 })
                 const result = await res.json()
                 if (res.ok) {

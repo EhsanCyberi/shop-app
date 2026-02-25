@@ -39,7 +39,8 @@ export default function CartBuy({user}) {
         const response = await fetch("https://shop-apps-omega.vercel.app/api/orders", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(orderData)
+            body: JSON.stringify(orderData),
+            credentials: 'include',
         })
         if (response.ok) {
             alert("سفارش شما ثبت شد")

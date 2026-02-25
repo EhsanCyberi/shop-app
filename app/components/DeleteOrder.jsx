@@ -8,7 +8,8 @@ export default function DeleteOrder({orderId, refreshHandler}) {
             const res = await fetch("https://shop-apps-omega.vercel.app/api/orders", {
                 method: "DELETE",
                 headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(orderId)
+                body: JSON.stringify(orderId),
+                credentials: 'include',
             })
             const result = await res.json()
             if (res.ok) {

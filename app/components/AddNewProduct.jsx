@@ -25,7 +25,8 @@ export default function AddNewProduct({refHandler, handleComp}) {
             const res = await fetch("https://shop-apps-omega.vercel.app/api/products", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
-                body: JSON.stringify(product)
+                body: JSON.stringify(product),
+                credentials: 'include',
             })
             const result = await res.json()
             if (await res.ok) {

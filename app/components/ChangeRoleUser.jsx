@@ -10,7 +10,8 @@ export default function ChangeRoleUser({user, refreshHandler}) {
             const res = await fetch("https://shop-apps-omega.vercel.app/api/users", {
                 method: "PUT",
                 headers: {"Content-Type" : "application/json"},
-                body: JSON.stringify(userTarget)
+                body: JSON.stringify(userTarget),
+                credentials: 'include',
             })
             const result = await res.json()
             if (res.ok) {
