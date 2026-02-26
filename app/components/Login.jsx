@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
-export default function Register() {
+export default function Login() {
     const router = useRouter()
     let [message, setMessage] = useState("")
     let [user, setUser] = useState({
